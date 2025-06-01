@@ -1,0 +1,143 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+/* header Styles */
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  animation: fadeIn 1.2s ease-in-out;
+}
+/* quote-section Styles */
+.quote-section {
+  margin-top: 30px;
+}
+
+.btn {
+  background: #ffffff;
+  color: #333;
+  padding: 14px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite alternate;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.quote-box {
+  margin-top: 35px;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  position: relative;
+  padding: 20px;
+  min-height: 100px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  font-family: "Playfair Display", serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.quote-text {
+  display: block;
+  margin: 15px 0;
+  font-size: 1.3rem;
+  transition: opacity 0.5s ease-in-out;
+  min-height: 100px;
+}
+.quote-text.fade {
+  opacity: 0;
+  pointer-events: none;
+}
+/* footer Styles */
+.footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .quote-box {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}
